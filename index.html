@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      const contactList = [
+    {
+      id: 1,
+      first_name: 'Vasya',
+      last_name: 'Petrov',
+      nick_name: '',
+      phone: 38093945394,
+      group: [
+        {
+          name: 'friends',
+          id: 2
+        }
+      ],
+      actions: null
+    },
+    {
+      id: 2,
+      first_name: 'Petya',
+      last_name: '',
+      nick_name: 'Sizo',
+      phone: 3809722122,
+      group: [
+        {
+          name: 'best_friends',
+          id: 1
+        }
+      ],
+      actions: [
+        {
+          name: 'missed call',
+          value: 3,
+          id: 1
+        }
+      ]
+    },
+    {
+      id: 2,
+      first_name: 'Rustem',
+      last_name: '',
+      nick_name: 'Box',
+      phone: 3809700000,
+      group: [
+        {
+          name: 'other',
+          id: 3
+        }
+      ],
+      actions: [
+        {
+          name: 'missed call',
+          value: 13,
+          id: 1
+        }
+      ]
+    }
+    ];
+
+    contactList.map (contactlist => {
+        let groupName = contactlist.group.map(item => item.name);
+
+        console.log(
+            `Имя : ${contactlist.first_name} \n` ,
+            `Номер : ${contactlist.phone} \n` ,
+            `Группа : ${groupName} \n ` 
+        )
+    } )
+
+    </script>
+</body>
+</html>

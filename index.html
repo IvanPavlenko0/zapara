@@ -4,76 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+    
 </head>
 <body>
-    <script>
-      const contactList = [
-    {
-      id: 1,
-      first_name: 'Vasya',
-      last_name: 'Petrov',
-      nick_name: '',
-      phone: 38093945394,
-      group: [
-        {
-          name: 'friends',
-          id: 2
-        }
-      ],
-      actions: null
-    },
-    {
-      id: 2,
-      first_name: 'Petya',
-      last_name: '',
-      nick_name: 'Sizo',
-      phone: 3809722122,
-      group: [
-        {
-          name: 'best_friends',
-          id: 1
-        }
-      ],
-      actions: [
-        {
-          name: 'missed call',
-          value: 3,
-          id: 1
-        }
-      ]
-    },
-    {
-      id: 2,
-      first_name: 'Rustem',
-      last_name: '',
-      nick_name: 'Box',
-      phone: 3809700000,
-      group: [
-        {
-          name: 'other',
-          id: 3
-        }
-      ],
-      actions: [
-        {
-          name: 'missed call',
-          value: 13,
-          id: 1
-        }
-      ]
-    }
-    ];
-
-    contactList.map (contactlist => {
-        let groupName = contactlist.group.map(item => item.name);
-
-        console.log(
-            `Имя : ${contactlist.first_name} \n` ,
-            `Номер : ${contactlist.phone} \n` ,
-            `Группа : ${groupName} \n ` 
-        )
-    } )
-
-    </script>
+    <div id="calculator">
+        <div class="header">
+            <input type="text">
+            <input type="submit" value="c">
+        </div>
+        <div class="body-calc">
+            <div class="left-side">
+                <div class="number">1</div>
+                <div class="number">2</div>
+                <div class="number">3</div>
+                <div class="number">4</div>
+                <div class="number">5</div>
+                <div class="number">6</div>
+                <div class="number">7</div>
+                <div class="number">8</div>
+                <div class="number">9</div>
+                <div class="number">0</div>
+            </div>
+            <div class="right-side">
+                <div class="active">+</div>
+                <div class="active">-</div>
+                <div class="active">/</div>
+                <div class="active">*</div>
+                <div class="active">=</div>
+            </div>
+        </div>
+    </div>
+<script src="./js/main.js"></script>
 </body>
 </html>
